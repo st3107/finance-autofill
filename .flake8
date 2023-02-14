@@ -7,4 +7,4 @@ exclude =
     versioneer.py,
     finance_autofill/_version.py,
     docs/source/conf.py
-max-line-length = 115
+ignore = E501

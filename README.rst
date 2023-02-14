@@ -12,9 +12,24 @@ finance-autofill
 A light weight CLI to summarize transcations in an excel form.
 
 * Free software: 3-clause BSD license
-* Documentation: (COMING SOON!) https://st3107.github.io/finance-autofill.
+* Documentation: https://st3107.github.io/finance-autofill.
 
-Features
---------
+Installation
+------------
 
-* TODO
+Install the pip, and then use pip to install the software.
+
+```
+pip install finance-autofill
+```
+
+Usage
+-----
+
+Give the excel file path to the excel file.
+
+```
+finance-autofill transaction-records.xlsx
+```
+
+The two new spreadsheets shoulw appear in the file. That's the summarized result.

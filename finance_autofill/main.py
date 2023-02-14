@@ -2,6 +2,9 @@ from typing import List
 
 import fire
 import pandas as pd
+import warnings
+
+warnings.simplefilter(action="ignore", category=FutureWarning)
 
 
 def main():
@@ -10,7 +13,7 @@ def main():
 
 def finance_autofill(excel_file: str) -> None:
     """Summarize the transaction records and write them in two new spreadsheets in the same file.
-    
+
     It separates the rows by the `Fee` of 9.02 and 14.04 in two tables. Then, for each table, it groups the rows by the `BillingCompanyName`, counts the number of transactions and sums up the fee. It writes the count and the sum in two rows after the rows of the one `BillingCompanyName`.
 
     Parameters
@@ -51,7 +54,6 @@ def _write_spreadsheet(excel_file: str, df: pd.DataFrame, sheet_name: str) -> No
 
 
 def _get_summarized_dfs(df: pd.DataFrame) -> List[pd.DataFrame]:
-    summarized_dfs = []
     df1 = df.loc[df["Fee"] == 9.02]
     df2 = df.loc[df["Fee"] == 14.04]
     df1 = _get_summarized_df(df1)
