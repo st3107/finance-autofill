@@ -44,7 +44,7 @@ setup(
     author_email='songshengtao1@gmail.com',
     url='https://github.com/st3107/finance-autofill',
     python_requires='>={}'.format('.'.join(str(n) for n in min_version)),
-    packages=find_packages(exclude=['docs', 'tests']),
+    packages=find_packages(exclude=['docs', 'tests', 'rever']),
     entry_points={
         'console_scripts': [
             # 'command = some.module:some_function',
