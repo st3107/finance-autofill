@@ -37,7 +37,7 @@ with open(path.join(here, 'requirements.txt')) as requirements_file:
 
 setup(
     name='finance-autofill',
-    version="0.0.1",
+    version='0.0.1',
     description="A light weight CLI to summarize transcations in an excel form.",
     long_description=readme,
     author="Songsheng Tao",
