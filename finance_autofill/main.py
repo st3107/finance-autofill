@@ -44,11 +44,11 @@ def _check_file(excel_file: str) -> None:
 
 
 def _read_spreadsheet(excel_file: str) -> None:
-    return pd.read_excel(excel_file, sheet_name=0)
+    return pd.read_excel(excel_file, engine="openpyxl", sheet_name=0)
 
 
 def _write_spreadsheet(excel_file: str, df: pd.DataFrame, sheet_name: str) -> None:
-    with pd.ExcelWriter(excel_file, mode="a") as writer:
+    with pd.ExcelWriter(excel_file, mode="a", engine="openpyxl") as writer:
         df.to_excel(writer, sheet_name, index=False)
     return
 
