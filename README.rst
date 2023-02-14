@@ -19,17 +19,13 @@ Installation
 
 Install the pip, and then use pip to install the software.
 
-```
-pip install finance-autofill
-```
+``pip install finance-autofill``
 
 Usage
 -----
 
 Give the excel file path to the excel file.
 
-```
-finance-autofill transaction-records.xlsx
-```
+``finance-autofill transaction-records.xlsx``
 
 The two new spreadsheets shoulw appear in the file. That's the summarized result.
